@@ -1,5 +1,7 @@
 //Noah Boushee
-//need to ensure that data file runs with large data sets, 400 and 800
+//A graph traversal implementation of the problem with the specifications from homework 11
+//The requirements were a "drunk walk" from some starting point to home. 
+//Each graph link had a percentage associated with it.
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -117,7 +119,7 @@ void print2(struct node** head) {   //prints the nodlet things
         current = current->next;  
      } 
 }
-
+//A "drunk walk" random traversal of the graph 
 float drunkWalk(struct node**head, char start[]){//need to ensure that random function is seeded correctly
     float probTotal = 0.0;
     int totalArcs = 0;//very gross function, cycles through and finds matching nodes
